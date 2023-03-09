@@ -1,6 +1,7 @@
 import {Image, Pressable, Text, View, StyleSheet, Platform} from "react-native";
 import {useNavigation} from "@react-navigation/native";
-import MealDetails from "./MealDetails";
+import MealDetails from "../MealDetails";
+
 
 
 function MealItem({id, title, imageUrl, duration, complexity, affordability}) {
@@ -26,9 +27,9 @@ function MealItem({id, title, imageUrl, duration, complexity, affordability}) {
                         <Text style={styles.title}>{title}</Text>
                     </View>
                     <MealDetails
-                    duration={duration}
-                    complexity={complexity}
-                    affordability={affordability}
+                        duration={duration}
+                        complexity={complexity}
+                        affordability={affordability}
                     />
                 </View>
             </Pressable>
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
         shadowOpacity: {width: 0, height: 2},
         shadowRadius: 16,
     },
-    buttonPressed:{
+    buttonPressed: {
         opacity: 0.5
     },
     innerContainer: {
